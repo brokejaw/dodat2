@@ -31,6 +31,7 @@ class Api::BoardsController < ApplicationController
   
   def show
     @board = Board.find(params[:id])
-    render :json => @board
+  render :show
+   #render :json => @board
   end
 end
