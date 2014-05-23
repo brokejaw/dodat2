@@ -8,4 +8,9 @@ class Api::CardsController < ApplicationController
       render :json => @card.errors, :status => :unprocessable_entity
     end
   end
+  
+  def show
+    @card = Card.find(params[:id])
+    render :json => @card
+  end
 end
