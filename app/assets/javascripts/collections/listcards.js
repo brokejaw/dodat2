@@ -1,11 +1,12 @@
-window.Dodat2.Collections.Cards = Backbone.Collection.extend({
+window.Dodat2.Collections.ListCards = Backbone.Collection.extend({
+	initialize: function (models, options) {
+		this.list = options.list;
+	},
+	
 	model: Dodat2.Models.Card,
 	
 	url: function () {
-		return this.card.url() + "/cards";
+		return this.list.url() + "/cards";
 	},	
-	
-	initialize: function (models, options) {
-		this.list = options.list;
-	}
+
 });
