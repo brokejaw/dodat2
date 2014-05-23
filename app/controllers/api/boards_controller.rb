@@ -15,7 +15,7 @@ class Api::BoardsController < ApplicationController
   end
   
   def create
-    @board = Board.new(params[:board])
+    @board = Board.new(board_params)
     
     if @board.save
       render :json => @board
@@ -32,5 +32,10 @@ class Api::BoardsController < ApplicationController
   def show
     @board = Board.find(params[:id])
     render :show
+  end
+  
+  private
+  def board_params
+    params.require(:board).permit(:title, :user_id)
   end
 end

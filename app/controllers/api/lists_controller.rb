@@ -4,10 +4,10 @@ class Api::ListsController < ApplicationController
   #   render :json => @lists
   # end
   # 
-  # def show
-  #   @list = List.find(params[:id])
-  #   render :json => @list
-  # end
+  def show
+    @list = List.find(params[:id])
+    render :json => @list
+  end
   
   def create
     @list = List.new(params[:list])
