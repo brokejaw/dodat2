@@ -1,4 +1,5 @@
 Dodat2::Application.routes.draw do
+  root :to => "site#root"  
     
   namespace :api do
     resources :boards, except: [:new, :edit] do
