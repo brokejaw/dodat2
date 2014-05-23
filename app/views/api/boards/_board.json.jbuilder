@@ -1,1 +1,0 @@
-json.(board, :title, :user_id, :id)

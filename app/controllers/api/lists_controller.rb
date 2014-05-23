@@ -1,13 +1,13 @@
 class Api::ListsController < ApplicationController
-  def index
-    @lists  = List.where(:board_id => params[:board_id])
-    render :json => @lists
-  end
-  
-  def show
-    @list = List.find(params[:id])
-    render :json => @list
-  end
+  # def index
+  #   @lists  = List.where(:board_id => params[:board_id])
+  #   render :json => @lists
+  # end
+  # 
+  # def show
+  #   @list = List.find(params[:id])
+  #   render :json => @list
+  # end
   
   def create
     @list = List.new(params[:list])
