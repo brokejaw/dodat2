@@ -1,4 +1,8 @@
-window.Dodat2.Collections.Lists = Backbone.Collection.extend({
+window.Dodat2.Collections.BoardLists = Backbone.Collection.extend({
+	initialize: function (models, options) {
+		this.board = options.board;
+	},
+	
 	model: Dodat2.Models.List,
 	
 	url: function () {
