@@ -1,0 +1,1 @@
+"rails generate backbone:scaffold ModelName --javascript" will create a lot of boilerplate code for us. it creates a new router each time, so be careful. 
