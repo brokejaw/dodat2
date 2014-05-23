@@ -1,0 +1,1 @@
+json.(list, :title, :board_id, :id)
