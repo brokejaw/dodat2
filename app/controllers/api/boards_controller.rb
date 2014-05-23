@@ -4,7 +4,8 @@ class Api::BoardsController < ApplicationController
     if @board.update_attributes(params[:board])
       render :json => @board
     else
-      render :json => @board.errors :status => :unprocessable_entity
+      render :json => @board.errors, :status => :unprocessable_entity
+    end
   end
   
   def destroy
