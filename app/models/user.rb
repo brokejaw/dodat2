@@ -1,14 +1,14 @@
 class User < ActiveRecord::Base
   attr_reader :password
-  validates :email, :password_digest, presence: true
+  validates :username, :password_digest, presence: true
   validates :password, :length => { :minimum => 6, :allow_nil => true }
   validates :session_token, :presence => true
-  validates :email, uniqueness: true
+  validates :username, uniqueness: true
   
   before_validation :ensure_session_token
   
-  def self.find_by_credentials(email, password)
-    user = User.find_by_email(email)
+  def self.find_by_credentials(username, password)
+    user = User.find_by_username(username)
     
     user.try(:is_password?, password) ? user : nil
   end
