@@ -5,6 +5,7 @@ window.Dodat2 = {
   Routers: {},
   initialize: function() {
     alert('Hello from Backbone!');
+	
   }
 };
 

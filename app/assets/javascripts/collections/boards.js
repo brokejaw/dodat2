@@ -1,6 +1,16 @@
 window.Dodat2.Collections.Boards = Backbone.Collection.extend({
 	url: "api/boards",
 	model: Dodat2.Models.Board,
+	
+	getOrFetch: function (id) {
+		var model = this.get(id);
+		
+		if (!model) {
+			model = new Dodat2.Models.Board({id: id});
+			model.fetch();
+		}
+		return model;
+	},
 }); 
 
 // fetch	GET	controller#index
