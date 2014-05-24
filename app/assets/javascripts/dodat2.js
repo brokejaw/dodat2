@@ -4,11 +4,17 @@ window.Dodat2 = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
-	
+	  alert("initialization worked");
+	  var view = new Dodat2.Views.BoardsIndex({
+	  	collection: allBoards
+	  });
+	  
+	  
+	  allBoards.fetch({
+			alert("allBoards fetched");
+		  success: function () {
+		  	$("body").append(view.render().$el);
+		  }
+	  });
   }
 };
-
-$(document).ready(function(){
-  Dodat2.initialize();
-});

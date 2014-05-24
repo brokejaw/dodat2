@@ -4,8 +4,23 @@
   <title>Dodat2</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application"%>
- <!-- <%= csrf_meta_tags %> -->
+ <%= csrf_meta_tags %>
 </head>
+	<nav class="navbar navbar-default">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">Dodat</a>
+	    </div>
+	    <ul class="nav navbar-right">
+	      <li>
+	        <% if logged_in? %>
+	          <%= button_to "Log out", session_url, { method: :delete, class: "btn btn-xs btn-warning" } %>
+	        <% end %>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
 <body>
 
 <%= yield %>
