@@ -15,7 +15,7 @@ window.Dodat2.Router = Backbone.Router.extend({
 	  allBoards.fetch();
 		this._swapView(view);
 	},
-	
+		
   _swapView: function (view) {
     if (this._currentView) {
       this._currentView.remove();
