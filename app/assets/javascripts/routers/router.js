@@ -4,7 +4,8 @@ window.Dodat2.Router = Backbone.Router.extend({
 	},
 	
 	routes: {
-		'': 'boardsIndex'
+		'': 'boardsIndex',
+		'board/:id': 'boardShow'
 	},
 	
 	boardsIndex: function () {
@@ -13,6 +14,16 @@ window.Dodat2.Router = Backbone.Router.extend({
 	  });
 	  
 	  allBoards.fetch();
+		this._swapView(view);
+	},
+	
+	boardShow: function (id) {
+		var board = allBoards.getOrFetch(id);
+		
+		var view = new Dodat2.Views.BoardShow({
+			model: board
+		});
+		
 		this._swapView(view);
 	},
 		
