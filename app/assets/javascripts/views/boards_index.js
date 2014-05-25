@@ -1,18 +1,16 @@
 window.Dodat2.Views.BoardsIndex = Backbone.View.extend({
-	template: JST["boards/index"],
+	template: JST['boards/index'],
 	
-	events: {
-		"click button.refresh": "refresh"
-	},
-	
-	initialize: function (options) {
-		this.listenTo(this.collection, "sync", this.render);
+	initialize: function () {
+		this.listenTo(this.collection, 'sync', this.render);
 	},
 	
 	render: function () {
-		var renderedContent = this.template({ boards: this.collection });
-		this.$el.html(renderedContent);
-		
+		var content = this.template({ 
+			boards: this.collection 
+		});
+
+		this.$el.html(content);
 		return this;
 	},
 });

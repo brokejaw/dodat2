@@ -12,4 +12,18 @@
  *= require_tree .
  */
 
-@import "bootstrap"
+@import "bootstrap";
+
+.container {
+	text-align: center;
+}
+
+.navbar {
+	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	display: block;
+	background: #27709b;
+}
+
+.navbar a {
+	color: #fff;
+}

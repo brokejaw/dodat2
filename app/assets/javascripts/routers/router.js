@@ -4,7 +4,7 @@ window.Dodat2.Router = Backbone.Router.extend({
 	},
 	
 	routes: {
-		'': "boardsIndex"
+		'': 'boardsIndex'
 	},
 	
 	boardsIndex: function () {
@@ -20,10 +20,11 @@ window.Dodat2.Router = Backbone.Router.extend({
     if (this._currentView) {
       this._currentView.remove();
     }
-    this._currenView = view;
+		
+    this._currentView = view;
     this.$rootEl.html(view.render().$el);
   }
-}); 
+});
 
 
 //every view has this.$el. default = <div>...</div>window.Dodat2.Router.Router = Backbone.Routers.extend({
