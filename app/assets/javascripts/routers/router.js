@@ -5,7 +5,7 @@ window.Dodat2.Router = Backbone.Router.extend({
 	
 	routes: {
 		'': 'boardsIndex',
-		'board/:id': 'boardShow'
+		'boards/:id': 'boardShow'
 	},
 	
 	boardsIndex: function () {
