@@ -2,19 +2,26 @@ window.Dodat2 = {
   Models: {},
   Collections: {},
   Views: {},
-  Routers: {},
+	Routers: {},
   initialize: function() {
 	  alert("initialization worked");
-	  var view = new Dodat2.Views.BoardsIndex({
-	  	collection: allBoards
+	  Dodat2.Router = new Dodat2.Router({
+	  	$rootEl: $('#content')
 	  });
-	  
-	  
-	  allBoards.fetch({
-			alert("allBoards fetched");
-		  success: function () {
-		  	$("body").append(view.render().$el);
-		  }
-	  });
-  }
+		Backbone.history.start();
+}
 };
+// $(Dodat2.initialize);
+ //  var view = new Dodat2.Views.BoardsIndex({
+//   	collection: allBoards
+//   });
+//   
+//   
+//   allBoards.fetch({
+// 	  success: function () {
+// 	  	view.render();
+// 			$("body").append(view.$el);
+// 	  }
+//   });
+// 	
+// }

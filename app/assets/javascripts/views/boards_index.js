@@ -6,11 +6,7 @@ window.Dodat2.Views.BoardsIndex = Backbone.View.extend({
 	},
 	
 	initialize: function (options) {
-		this.listenTo(this.collection), "sync", this.render);
-	},
-	
-	refresh: function () {
-		this.collection.fetch();
+		this.listenTo(this.collection, "sync", this.render);
 	},
 	
 	render: function () {
