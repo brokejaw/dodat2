@@ -9,6 +9,21 @@ window.Dodat2.Views.BoardShow = Backbone.View.extend({
 		this.listenTo(allBoards, 'add', this.render)
 	},
 	
+	events: {
+		'click button.deleteBoard': 'deleteBoard'
+	},
+	
+	deleteBoard: function (event) {;
+
+		var boardID = this.model.id;
+		this.model.destroy({
+			success: function () {
+				alert("hey");
+			Dodat2.Router.navigate('#', { trigger: true })
+			}
+		});
+	},
+	
 	render: function () {
 		var content = this.template({
 			board: this.model,
