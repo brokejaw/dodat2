@@ -1,5 +1,7 @@
 <h3><%= list.escape('title') %></h3>
 
+<ul class="card-list"></ul>
+
 <% list.cards().each(function (card) { %>
   <%= card.escape('title') %>
 <% }) %>

@@ -4,7 +4,6 @@ window.Dodat2 = {
   Views: {},
 	Routers: {},
   initialize: function() {
-	  alert("initialization worked");
 	  Dodat2.Router = new Dodat2.Router({
 	  	$rootEl: $('#content')
 	  });
