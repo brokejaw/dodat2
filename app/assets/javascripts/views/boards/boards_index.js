@@ -2,7 +2,7 @@ window.Dodat2.Views.BoardsIndex = Backbone.View.extend({
 	template: JST['boards/index'],
 	
 	initialize: function () {
-		this.listenTo(this.collection, 'sync', this.render);
+		this.listenTo(this.collection, 'add remove sync', this.render);
 	},
 	
 	render: function () {
