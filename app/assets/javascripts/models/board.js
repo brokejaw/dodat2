@@ -3,8 +3,6 @@ window.Dodat2.Models.Board = Backbone.Model.extend({
 	
 	parse: function (json) {
 		if (json.lists) {
-			
-			//build new model objs + put in collection
 			this.lists().set(json.lists, { parse: true } );
 			delete json.lists;
 		}
@@ -13,7 +11,9 @@ window.Dodat2.Models.Board = Backbone.Model.extend({
 	
 	lists: function () {
 		if (!this._lists) {
-			this._lists = new Dodat2.Collections.BoardLists([], { board: this });
+			this._lists = new Dodat2.Collections.BoardLists([], { 
+				board: this 
+			});
 		}
 		return this._lists;
 	},

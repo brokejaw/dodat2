@@ -4,10 +4,13 @@ window.Dodat2.Collections.Boards = Backbone.Collection.extend({
 	
 	getOrFetch: function (id) {
 		var model = this.get(id);
+		var boards = this; 
 		
 		if (!model) {
 			model = new Dodat2.Models.Board({id: id});
-			model.fetch();
+			model.fetch({
+				success: function () { boards.add(model) }
+			});
 		}
 		return model;
 	},

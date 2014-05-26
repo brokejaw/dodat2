@@ -1,7 +1,7 @@
 Dodat2::Application.routes.draw do
   root :to => "site#root"  
     
-  namespace :api do
+  namespace :api, :defaults => { :format => :json } do
     resources :boards, except: [:new, :edit] do
       resources :lists, only: [:index, :show, :create, :update, :destroy]
     end

@@ -1,8 +1,12 @@
 window.Dodat2.Views.BoardShow = Backbone.View.extend({
 	template: JST['boards/show'],
 	
+	//this.model = board(:id)
+	
 	initialize: function () {
-		
+		this.listenTo(this.model, "sync", this.render);
+		this.listenTo(this.model.lists(), "sync", this.render);
+		this.listenTo(allBoards, 'add', this.render)
 	},
 	
 	render: function () {
@@ -13,7 +17,9 @@ window.Dodat2.Views.BoardShow = Backbone.View.extend({
 		
 		this.$el.html(content);
 		this.renderLists();
+
 		return this;
+		
 	},
 	
 	renderLists: function () {
@@ -28,10 +34,13 @@ window.Dodat2.Views.BoardShow = Backbone.View.extend({
 	addSubView: function (selector, subview) {
 		var selectorSubViews = 
 			this.subviews()[selector] || (this.subviews()[selector] = []);
-			
+	
+			// [].push("")
 			selectorSubViews.push(subview);
 			
 			var $selectorEl = this.$(selector);
+			
+			//subview.$el = <div><h3>To do</h3> "Clean the house" </div>
 			$selectorEl.append(subview.$el);
 	},
 	
