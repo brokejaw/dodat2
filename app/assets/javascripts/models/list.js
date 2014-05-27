@@ -1,5 +1,5 @@
 window.Dodat2.Models.List = Backbone.Model.extend({
-	urlRoot: "/api/lists",
+	// urlRoot: "/api/lists",
 	
 	parse: function (json) {
 		if (json.cards) {

@@ -10,7 +10,7 @@ class Api::ListsController < ApplicationController
   end
   
   def create
-    @list = List.new(params[:list])
+    @list = List.new(list_params)
     
     if @list.save
       render :json => @list
@@ -23,5 +23,11 @@ class Api::ListsController < ApplicationController
   end
   
   def destroy
+  end
+  
+  private
+  
+  def list_params
+    params.require(:list).permit(:title, :board_id)
   end
 end

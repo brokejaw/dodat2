@@ -1,7 +1,4 @@
 window.Dodat2.Views.ListNew = Backbone.View.extend({
-	initialize: function (options) {
-		this.board = options.board;
-	},
 	
 	events: {
 		'submit form': 'create'
@@ -11,7 +8,7 @@ window.Dodat2.Views.ListNew = Backbone.View.extend({
 	
 	render: function () {
 		var content = this.template({
-			board: this.board
+			board: this.model
 		});
 		this.$el.html(content);
 		return this;
@@ -20,6 +17,13 @@ window.Dodat2.Views.ListNew = Backbone.View.extend({
 	create: function (event) {
 		event.preventDefault();
 		var params = $(event.currentTarget).serializeJSON()["list"];
-		this.board.lists().create(params);
+		// var newList = new Dodat2.Models.List(params);
+		
+		this.model.lists().create(params, {
+			wait: true, 
+			success: function (savedList) {
+				alert("saved");
+			}
+		})
 	},
 });

@@ -6,7 +6,7 @@ window.Dodat2.Collections.BoardLists = Backbone.Collection.extend({
 	model: Dodat2.Models.List,
 	
 	url: function () {
-		//return "api/boards/" + this.board.get("id") + "lists";
+		// return "api/boards/" + this.board.get("id") + "lists";
 		return this.board.url() + "/lists";
 	},
 });

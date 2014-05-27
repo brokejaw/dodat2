@@ -24,13 +24,12 @@ window.Dodat2.Views.BoardShow = Backbone.View.extend({
 	},
 	
 	newList: function (event) {
-		alert('hey');
 		event.preventDefault();
 		
 		var view = new Dodat2.Views.ListNew({
-			board: this.model
+			model: this.model
 		});
-		alert('hey again');
+		// alert('hey again');
 		$(event.currentTarget).replaceWith(view.render().$el);
 	},
 	
