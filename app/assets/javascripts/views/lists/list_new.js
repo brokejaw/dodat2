@@ -21,9 +21,7 @@ window.Dodat2.Views.ListNew = Backbone.View.extend({
 		
 		this.model.lists().create(params, {
 			wait: true, 
-			success: function (savedList) {
-				alert("saved");
-			}
+			success: function (savedList) {}
 		})
 	},
 });

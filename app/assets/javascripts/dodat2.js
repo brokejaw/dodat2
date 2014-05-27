@@ -10,17 +10,7 @@ window.Dodat2 = {
 		Backbone.history.start();
 }
 };
-// $(Dodat2.initialize);
- //  var view = new Dodat2.Views.BoardsIndex({
-//   	collection: allBoards
-//   });
-//   
-//   
-//   allBoards.fetch({
-// 	  success: function () {
-// 	  	view.render();
-// 			$("body").append(view.$el);
-// 	  }
-//   });
-// 	
-// }
+
+Backbone.CompositeView = Backbone.View.extend({
+	
+}),

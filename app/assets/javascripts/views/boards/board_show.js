@@ -29,7 +29,6 @@ window.Dodat2.Views.BoardShow = Backbone.View.extend({
 		var view = new Dodat2.Views.ListNew({
 			model: this.model
 		});
-		// alert('hey again');
 		$(event.currentTarget).replaceWith(view.render().$el);
 	},
 	

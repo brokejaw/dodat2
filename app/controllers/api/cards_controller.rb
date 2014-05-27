@@ -1,6 +1,6 @@
 class Api::CardsController < ApplicationController
   def create
-    @card = Card.new(params[:card])
+    @card = Card.new(card_params)
     
     if @card.save
       render :json => @card
@@ -12,5 +12,10 @@ class Api::CardsController < ApplicationController
   def show
     @card = Card.find(params[:id])
     render :json => @card
+  end
+  
+  private
+  def card_params
+    params.require(:card).permit(:title, :description, :list_id)
   end
 end
