@@ -24,6 +24,10 @@
 	background: #27709b;
 }
 
-.navbar a {
+a.navbar-brand.header-title {
 	color: #fff;
+}
+
+a.navbar-brand.header-title:hover {
+	color: pink;
 }

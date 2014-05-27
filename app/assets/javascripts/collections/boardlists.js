@@ -10,9 +10,3 @@ window.Dodat2.Collections.BoardLists = Backbone.Collection.extend({
 		return this.board.url() + "/lists";
 	},
 });
-
-// example
-// var board = new Dodat2.Models.Board({ id: 3 })
-// var lists = new Dodat2.Collections.Lists([], {
-//	board: board
-// }); 
