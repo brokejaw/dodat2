@@ -6,7 +6,8 @@ window.Dodat2.Collections.ListCards = Backbone.Collection.extend({
 	model: Dodat2.Models.Card,
 	
 	url: function () {
-		return this.list.url() + "/cards";
+		return "api/lists/" + this.list.get("id") + "/" + "cards";
+		//return this.list.url() + "/cards";
 	},	
 
 });

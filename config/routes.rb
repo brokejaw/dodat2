@@ -7,7 +7,7 @@ Dodat2::Application.routes.draw do
     end
     
     resources :lists, only: [:show, :update, :destroy] do
-      resources :cards, only: [:create, :index]
+      resources :cards, only: [:create, :index, :destroy]
     end
     
     resources :cards, only: [:show, :update, :destroy]

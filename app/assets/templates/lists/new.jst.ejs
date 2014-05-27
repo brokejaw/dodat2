@@ -5,12 +5,11 @@
 	
 	<input type="hidden"
 		name="list[board_id]"
-		value="<%= board.id %>">
+		value="<%= board.escape("id") %>">
 		
 	<input type="text"
 		name="list[title]"
 		id="list_title">
 		
 	<input type="submit">
-	
 </form>

@@ -6,13 +6,15 @@ window.Dodat2.Models.List = Backbone.Model.extend({
 			this.cards().set(json.cards, { parse: true } );
 			delete json.cards;
 		}
-		return json
+		return json;
 	},
 	
 	cards: function () {
 		if (!this._cards) {
-			this._cards = new Dodat2.Collections.ListCards([], { list: this });
+			this._cards = new Dodat2.Collections.ListCards([], { 
+				list: this 
+			});
 		}
-		return this._cards
-	},
+		return this._cards;
+	}
 });
