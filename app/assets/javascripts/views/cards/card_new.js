@@ -4,7 +4,7 @@ window.Dodat2.Views.CardNew = Backbone.View.extend({
 		'submit form': 'create'
 	},	
 	
-	template: JST['cards/new'],
+	template: JST['cards/cardnew'],
 	
 	render: function () {
 		var content = this.template({

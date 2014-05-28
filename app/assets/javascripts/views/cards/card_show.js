@@ -1,5 +1,5 @@
 window.Dodat2.Views.CardShow = Backbone.View.extend({
-	template: JST['cards/show'],
+	template: JST['cards/cardshow'],
 	
 	events: {
 		'click button.deleteCard': 'deleteCard'

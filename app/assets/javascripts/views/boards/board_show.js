@@ -1,5 +1,5 @@
 window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
-	template: JST['boards/show'],
+	template: JST['boards/boardshow'],
 		
 	initialize: function () {
 		this.listenTo(this.model, "sync", this.render);

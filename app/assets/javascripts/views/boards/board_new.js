@@ -1,5 +1,5 @@
 window.Dodat2.Views.BoardNew = Backbone.View.extend({
-	template: JST['boards/new'],
+	template: JST['boards/boardnew'],
 	
 	events: {
 		'submit form': 'create'

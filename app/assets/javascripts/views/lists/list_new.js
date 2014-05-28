@@ -4,7 +4,7 @@ window.Dodat2.Views.ListNew = Backbone.View.extend({
 		'submit form': 'create'
 	},	
 	
-	template: JST['lists/new'],
+	template: JST['lists/listnew'],
 	
 	render: function () {
 		var content = this.template({
