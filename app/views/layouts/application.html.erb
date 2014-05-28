@@ -5,12 +5,9 @@
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application"%>
   <%= csrf_meta_tags %>
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-	  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-	  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
 
-<div class="navbar navbar-default">
+<!-- <div class="navbar navbar-default">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
       <span class="icon-bar"></span>
@@ -53,11 +50,11 @@
       </li>
     </ul>
   </div>
-</div>
+</div> -->
 
 
 
-	<!-- <nav class="navbar navbar-default">
+	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
 	      <a class="navbar-brand header-title" href="#">Dodat</a>
@@ -70,13 +67,13 @@
 	      </li>
 	    </ul>
 	  </div>
-	</nav> -->
+	</nav>
 
 
 
 <body> 
 
 <%= yield %>
-<script>$(".sortable").sortable();</script>
+
 </body>
 </html>
