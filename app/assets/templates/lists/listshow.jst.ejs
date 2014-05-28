@@ -1,9 +1,12 @@
-<div class="list-placement">
-	<h4><%= list.escape('title') %></h4>
-		
-		<ul id='cards'>
-		</ul>
-		
-	<button class="deleteList">Delete List</button>
-	<a href="#" class="addCard">Add a card</a>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title"><%= list.escape('title') %></h3>
+	</div>
+		<div class="panel-body">
+			<ul id='cards'></ul>
+		</div>
 </div>
+	
+<button class="deleteList btn btn-sm btn-danger">Delete List</button>
+<a href="#" class="addCard">Add a card</a>

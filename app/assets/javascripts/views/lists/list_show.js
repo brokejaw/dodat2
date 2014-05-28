@@ -1,6 +1,8 @@
 window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 	template: JST['lists/listshow'],
 	
+	className: 'list-placement',
+	
 	initialize: function () {
 		this.listenTo(this.model.cards(), "remove sync", this.render);
 	},
