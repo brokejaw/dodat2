@@ -13,11 +13,14 @@
 	      <a class="navbar-brand header-title" href="#">Dodat</a>
 	    </div>
 	    <ul class="nav navbar-right">
-	      <li>
-	        <% if logged_in? %>
-	          <%= button_to "Log out", session_url, { method: :delete, class: "btn btn-xs btn-warning" } %>
-	        <% end %>
+	     	<% if logged_in? %>
+			  <li>
+		      <%= button_to "Log out", session_url, { method: :delete, class: "btn btn-xs btn-warning" } %>
 	      </li>
+				<li>
+				 Welcome, <%=username%>!
+					<% end %>
+				</li>
 	    </ul>
 	  </div>
 	</nav>
