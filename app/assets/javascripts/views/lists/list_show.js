@@ -1,6 +1,10 @@
 window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 	template: JST['lists/listshow'],
 	
+	initialize: function(){
+		this.modalID = "list-modal-" + this.model.id;
+	},
+	
 	className: 'list-placement',
 	
 	initialize: function () {
@@ -15,7 +19,8 @@ window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 	render: function () {
 		var content = this.template({
 			list: this.model,
-			cards: this.model.cards()
+			cards: this.model.cards(),
+			modalID: this.modalID
 		});
 		
 		this.$el.html(content);
@@ -35,9 +40,14 @@ window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 	},
 	
 	deleteList: function (event) {
+		debugger
+		var that = this;
 		event.preventDefault();
-		
-		this.model.destroy();
+		var $modal = $('#' + this.modalID);
+		$modal.modal('hide');
+		$modal.on('hidden.bs.modal', function(){
+			that.model.destroy();
+		});
 	},
 	
 	addCard: function(event) {
@@ -48,3 +58,7 @@ window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 		$(event.currentTarget).replaceWith(view.render().$el);
 	}
 });
+
+
+
+

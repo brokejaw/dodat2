@@ -32,7 +32,7 @@ window.Dodat2.Views.CardShow = Backbone.View.extend({
 		//but if we do something that will cause a refresh
 		//BEFORE a modal is completely gone, we will be screwed
 		//so we must be sure the modal is gone before destroying the card
-		$modal.on('hidden.bs.modal', function(){
+		$modal.on('hidden.bs.modal', function() {
 			that.model.destroy();
 		});
 	},

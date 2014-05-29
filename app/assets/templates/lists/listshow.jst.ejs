@@ -1,12 +1,32 @@
 
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<h3 class="panel-title"><%= list.escape('title') %></h3>
+		<h3 class="panel-title"><%= list.escape('title') %>
+		<button class="temp btn btn-sm btn-danger pull-right" data-toggle="modal" data-target="#<%=modalID%>">Delete List</button></h3>
+		
 	</div>
 		<div class="panel-body">
 			<ul id='cards'></ul>
 		</div>
 </div>
-	
-<button class="deleteList btn btn-sm btn-danger">Delete List</button>
-<a href="#" class="addCard">Add a card</a>
+
+<a href="#" class="addCard">Add a card...</a>
+
+<!-- Modal -->
+<div class="modal fade" id="<%=modalID%>" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel"><%= list.escape('title')%></h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete this List?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="deleteList btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
