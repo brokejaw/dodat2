@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.serializejson
 //= require jquery_ujs
+//= require jquery.ui.sortable
 
 //= require underscore
 //= require backbone
