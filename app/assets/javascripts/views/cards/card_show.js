@@ -1,5 +1,6 @@
 window.Dodat2.Views.CardShow = Backbone.View.extend({
 	template: JST['cards/cardshow'],
+	
 	initialize: function(){
 		this.modalID = "card-modal-" + this.model.id;
 	},

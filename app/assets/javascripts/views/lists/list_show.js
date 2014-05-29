@@ -1,14 +1,11 @@
 window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 	template: JST['lists/listshow'],
 	
-	initialize: function(){
-		this.modalID = "list-modal-" + this.model.id;
-	},
-	
 	className: 'list-placement',
 	
 	initialize: function () {
-		this.listenTo(this.model.cards(), "remove sync", this.render);
+		this.listenTo(this.model.cards(), "remove sync", this.render),
+		this.modalID = "list-modal-" + this.model.id;
 	},
 	
 	events: {
@@ -40,7 +37,6 @@ window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 	},
 	
 	deleteList: function (event) {
-		debugger
 		var that = this;
 		event.preventDefault();
 		var $modal = $('#' + this.modalID);
