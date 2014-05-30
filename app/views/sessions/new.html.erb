@@ -1,25 +1,27 @@
-<div class="container" align="center">
-	<div class="signin">
-  <%= render "layouts/errors" %>
-<div class="fontsize">	
-	<h1><font color="#e2e3e4">Dodat</font></h1>
-</div>
- <h1><font color="#e2e3e4">Sign In</font></h1>
+<div class="signinout">
+	<div class="container" align="center">
+		<div class="signin">
+	  <%= render "layouts/errors" %>
+	<div class="fontsize">	
+		<h1><font color="#e2e3e4">Dodat</font></h1>
+	</div>
+	 <h1><font color="#e2e3e4">Sign In</font></h1>
 
-  <form action="<%= session_url %>" method="post">
-    <%= auth_token_input %>
-    <label>
-      <font color="#428bca">Username</font><br>
-      <input type="text" name="user[username]">
-    </label>
-    <br>
-    <label>
-      <font color="#428bca">Password</font><br>
-      <input type="password" name="user[password]">
-    </label>
-    <br>
-    <input type="submit" class="btn btn-primary" value="Login">
-    <a href="<%= new_user_url %>"><font color="e2e3e4">New to Dodat?</font></a>
-  </form>
-</div>
+		  <form action="<%= session_url %>" method="post">
+		    <%= auth_token_input %>
+		    <label>
+		      <font color="#428bca">Username</font><br>
+		      <input type="text" name="user[username]">
+		    </label>
+		    <br>
+		    <label>
+		      <font color="#428bca">Password</font><br>
+		      <input type="password" name="user[password]">
+		    </label>
+		    <br>
+		    <input type="submit" class="btn btn-primary" value="Login">
+		    <a href="<%= new_user_url %>"><font color="e2e3e4">New to Dodat?</font></a>
+		  </form>
+		</div>
+	</div>
 </div>
