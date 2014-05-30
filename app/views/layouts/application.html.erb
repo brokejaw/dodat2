@@ -7,25 +7,56 @@
   <%= csrf_meta_tags %>
 </head>
 
-	<nav class="navbar navbar-default">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand header-title" href="#">Dodat</a>
-	    </div>
-	    <ul class="nav navbar-right">
-	     	<% if logged_in? %>
-			  <li>
-		      <%= button_to "Log out", session_url, { method: :delete, class: "btn btn-xs btn-warning" } %>
+<% if logged_in? %>
+	<div class="navbar navbar-default">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="#"><font color="#e2e3e4">Dodat</font></a>
+	  </div>
+		
+	  <div class="navbar-collapse collapse navbar-responsive-collapse">
+	    <ul class="nav navbar-nav">
+	      <li class="active"><a href="#">All Boards</a></li>
+	      <li><a href="#">Link</a></li>
+	      <li class="dropdown">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings<b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	          <li><a href="#">Profile</a></li>
+	          <li><a href="#">These do nothing</a></li>
+	          <li><a href="#">Don't be a hater</a></li>
+	          <li class="divider"></li>
+	          <li class="dropdown-header">Dropdown header</li>
+	          <li><a href="#">Separated link</a></li>
+	          <li><a href="#">One more separated link</a></li>
+	        </ul>
 	      </li>
+	    </ul>
+	    <form class="navbar-form navbar-left">
+	      <input type="text" class="form-control col-lg-8" placeholder="Search">
+	    </form>
+			
+	    <ul class="nav navbar-nav navbar-right">
 				<li>
 				 Welcome, <%=username%>!
-					<% end %>
 				</li>
+	      <li class="dropdown">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Logout <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	          
+	          <li class="divider"></li>
+					  <li><font color="#e2e3e4">
+				      <%= button_to "Log out", session_url, { method: :delete, class: "btn btn-xs btn-warning" } %></font>
+			      </li>
+	        </ul>
+	      </li>
 	    </ul>
 	  </div>
-	</nav>
-
-
+	</div>
+<% end %>
 
 <body> 
 

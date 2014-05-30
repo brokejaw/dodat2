@@ -19,7 +19,7 @@
 //}
 
 body {
-	background-color: #ffffff;
+	background-color: #2b3e50;
 }
 
 ul {
@@ -29,25 +29,20 @@ ul {
 
 .panel-body {
 	padding: 4px;
-	background: whitesmoke;
+	background-color: #2b3e50;;
 }
 
 .navbar {
-	background: #1e638c;
+	background: grey;
 }
+
 
 a.navbar-brand.header-title {
 	color: #fff;
 }
 
 a.navbar-brand.header-title:hover {
-	color: pink;
-}
 
-.list-body {
-	border-style: solid;
-	border-width: 10px;
-	border-color: red;
 }
 
 .list-placement {
@@ -64,7 +59,7 @@ a.navbar-brand.header-title:hover {
 .card {
 	float: left;
 	background-color: #ffffff;
-	border-bottom: 1px slategrey solid;
+	border-bottom: 1px #2b3e50 solid;
 	width: 240px;
 	border-radius: 3px;
 	margin: 3px 0;
@@ -74,7 +69,7 @@ a.navbar-brand.header-title:hover {
 }
 
 .container {
-	background-color: #ffffff;
+	background-color: #2b3e50;;
 }
 
 #board {
@@ -99,3 +94,18 @@ a.navbar-brand.header-title:hover {
 	transition-timing-function: ease-in;
 	width: 969px;
 }
+
+.boardbutton {
+	
+}
+
+//#outercontainer {
+//	position: relative;
+//}
+//
+//#innercontainer {
+//	position: absolute;
+//	top: 50%;
+//	height: 10em;
+//	margin-top: -5em;
+//}

@@ -1,15 +1,18 @@
-<h1>Index</h1>
 
-<ul>
-  <% boards.each(function (board) { %>
-    
-    <a href="#boards/<%= board.id %>">
-      <li>
-        <%= board.escape('title') %>
-      </li>
-    </a>
-    
-  <% }); %>
-</ul>
+<div align="center">
+		<font color=#e2e3e4><h1>Your Boards</h1></font>
 
-<a href="#boards/new">Create A New Board</a>
+		<ul class="boardsindex">
+		  <% boards.each(function (board) { %>
+    
+		    <a href="#boards/<%= board.id %>">
+		      <li>
+		        <%= board.escape('title') %>
+		      </li>
+		    </a>
+    
+		  <% }); %>
+		</ul>
+
+		<a href="#boards/new"><font color="#e2e3e4">Create A New Board</font></a>
+</div>
