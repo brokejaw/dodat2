@@ -14,6 +14,10 @@ window.Dodat2.Collections.Boards = Backbone.Collection.extend({
 		}
 		return model;
 	},
+	
+	// define the url
+	// define the model object in our collection
+	// getOrFetch => 
 }); 
 
 allBoards = new Dodat2.Collections.Boards();
