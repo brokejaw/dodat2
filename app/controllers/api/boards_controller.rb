@@ -25,7 +25,7 @@ class Api::BoardsController < ApplicationController
   end
   
   def index
-    @boards = Board.all
+    @boards = Board.all # sql queries, via rails
     render :index
   end
   

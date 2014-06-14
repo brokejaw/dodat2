@@ -10,9 +10,7 @@ window.Dodat2.Router = Backbone.Router.extend({
 	},
 	
 	boardsIndex: function () {
-	  var view = new Dodat2.Views.BoardsIndex({
-	  	collection: allBoards
-	  });
+	  var view = new Dodat2.Views.BoardsIndex({ collection: allBoards });
 	  
 	  allBoards.fetch();
 		this._swapView(view);

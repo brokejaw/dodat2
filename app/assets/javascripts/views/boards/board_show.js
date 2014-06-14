@@ -23,10 +23,8 @@ window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
 	
 	newList: function (event) {
 		event.preventDefault();
+		var view = new Dodat2.Views.ListNew({ model: this.model });
 		
-		var view = new Dodat2.Views.ListNew({
-			model: this.model
-		});
 		$(event.currentTarget).replaceWith(view.render().$el);
 	},
 	
