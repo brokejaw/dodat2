@@ -1,46 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Dodat2</title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application"%>
-  <%= csrf_meta_tags %>
-</head>
+	<head>
+	  <title>Dodat2</title>
+	  <%= stylesheet_link_tag    "application", media: "all" %>
+	  <%= javascript_include_tag "application"%>
+	  <%= csrf_meta_tags %>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body> 
+		<div class="header" id="header">
+			<div class="header__boards-menu">
+				<i class="upside-down fa fa-bar-chart-o"></i>
+				Boards
+			</div>
+			
+			<div class="header__brand">
+				<h4 class="header__brand__text">
+					<a href="#">Dodat</a>
+				</h4>
+			</div>
+			
+		</div>
 
-<% if logged_in? %>
-	<div class="navbar navbar-default">
-	  <div class="navbar-header">
-	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-	      <span class="icon-bar"></span>
-	      <span class="icon-bar"></span>
-	      <span class="icon-bar"></span>
-	    </button>
-	    <a class="navbar-brand" href="#"><font color="#e2e3e4">Dodat</font></a>
-	  </div>
-		
-	  <div class="navbar-collapse collapse navbar-responsive-collapse">
-	    <ul class="nav navbar-nav">
-	      <li><a href="#">All Boards</a></li>
-	    </ul>
-	    <ul class="nav navbar-nav navbar-right">
-	      <li class="dropdown">
-	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, 					<%=username%>! <b class="caret"></b></a>
-	        <ul class="dropdown-menu">
-	          
-	          <li class="divider"></li>
-					  <li><font color="#e2e3e4">
-				      <%= button_to "Log out", session_url, { method: :delete, class: 								"btn btn-xs btn-warning" } %></font>
-			      </li>
-	        </ul>
-	      </li>
-	    </ul>
-	  </div>
-	</div>
-<% end %>
+	<%= yield %>
 
-<body> 
-
-<%= yield %>
-
-</body>
+	</body>
 </html>

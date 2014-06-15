@@ -14,9 +14,43 @@
 
 @import "bootstrap";
 
-//.container {
-//	
-//}
+
+.header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to bottom, #27709b 0, #24688f 100%);
+	padding: 5px;
+	height: 40px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1),0 1px 0 rgba(0,0,0,0.1);
+}
+
+
+.header__boards-menu {
+	position: absolute;
+	z-index: 1;
+	padding: 0 8px;
+	background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0, rgba(255,255,255,0.2) 100%);
+	border-radius: 3px;
+	cursor: pointer;
+	height: 30px;
+	min-width: 30px;
+	color: #f3f3f3;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.header__brand{
+	text-align: center;
+	width: 99%;
+	padding: 0 8px;
+}
+
+.container {
+	position: absolute;
+	padding: 20px;
+}
 
 body {
 	background-color: #2b3e50;
@@ -36,14 +70,6 @@ ul {
 	background: grey;
 }
 
-
-a.navbar-brand.header-title {
-	color: #fff;
-}
-
-a.navbar-brand.header-title:hover {
-
-}
 
 .list-placement {
 	width: 250px;
@@ -68,9 +94,9 @@ a.navbar-brand.header-title:hover {
 	
 }
 
-.container {
-	background-color: #2b3e50;;
-}
+//.container {
+//	background-color: #2b3e50;;
+//}
 
 #board {
 	position: absolute;
@@ -102,23 +128,3 @@ a.navbar-brand.header-title:hover {
 .divider {
 	background-color: #2eb350;
 }
-//
-//.signinout {
-//	margin: 0;
-//  background: url('https://www.google.com/images/srpr/logo3w.png');
-//	background-size: 1440px 800px;
-//	background-repeat:no-repeat;
-//	display: compact;
-//	font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
-//}
-
-//#outercontainer {
-//	position: relative;
-//}
-//
-//#innercontainer {
-//	position: absolute;
-//	top: 50%;
-//	height: 10em;
-//	margin-top: -5em;
-//}
