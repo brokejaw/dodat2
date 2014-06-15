@@ -7,7 +7,7 @@ window.Dodat2 = {
 	  Dodat2.Router = new Dodat2.Router({
 	  	$rootEl: $('#content')
 	  });
-		Backbone.history.start();
+		Backbone.history.start(); 
 }
 };
 
