@@ -1,15 +1,17 @@
-<div class="board-canvas" style="height: 538px;">
-	<div id="board" class="clearfix">
+<div class="board_show">
+	<div class="board-canvas" style="height: 538px;">
+		<div id="board" class="clearfix">
 		
-		<h2><font color="#e2e3e4"><%= board.escape('title') %></font></h2>
-		<button class="deleteBoard btn btn-sm btn-danger pull-right">Delete Board</button>
+			<h2><%= board.escape('title') %></h2>
+			<button class="deleteBoard btn btn-sm btn-danger pull-right">Delete Board</button>
 
-		<div align="center">
-			<ul id='lists'>
-			</ul>
+			<div align="center">
+				<ul id='lists'>
+				</ul>
+			</div>
+		
+			<a href="#" class="newList"><font color="#e2e3e4">Add a list...</font></a>
+		
 		</div>
-		
-		<a href="#" class="newList"><font color="#e2e3e4">Add a list...</font></a>
-		
 	</div>
 </div>

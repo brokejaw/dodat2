@@ -1,17 +1,13 @@
-
-<div align="center">
-		<font color=#e2e3e4><h1>Your Boards</h1></font>
+<div class="board_index_show">
+		<h4 class="boards__header">My Boards</h4>
 
 		<ul class="boardsindex">
-		
 		  <% boards.each(function (board) { %>
-    
-		    <a href="#boards/<%= board.id %>">
-		      <li>
-		        <%= board.escape('title') %>
-		      </li>
-		    </a>
-    
+	      <li class="board_index_title">
+					<a class="board_index_title_link" href="#boards/<%= board.id %>">
+	        	<%= board.escape('title') %>
+					</a>
+	      </li>
 		  <% }); %>
 		</ul>
 
