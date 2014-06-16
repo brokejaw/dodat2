@@ -4,20 +4,26 @@ window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
 	initialize: function () {
 		this.listenTo(this.model, "sync", this.render);
 		this.listenTo(this.model.lists(), "remove sync", this.render);
-		this.listenTo(allBoards, 'add', this.render)
+		this.listenTo(allBoards, 'add', this.render);
+		this.modalID = "board-modal-" + this.model.id;
 	},
 	
 	events: {
 		'click button.deleteBoard': 'deleteBoard',
-		'click .newList': 'newList'
+		'click .list--new__button': 'newList'
 	},
 	
 	deleteBoard: function (event) {
-		var boardID = this.model.id;
-		this.model.destroy({
-			success: function () {
-			Dodat2.Router.navigate('#', { trigger: true })
-			}
+		var that = this;
+		event.preventDefault();
+		var $modal = $('#' + this.modalID);
+		$modal.modal('hide');
+		$modal.on('hidden.bs.modal', function(){
+			that.model.destroy({
+				success: function () {
+					Dodat2.Router.navigate('#', { trigger: true })
+				}
+			});
 		});
 	},
 	
@@ -31,6 +37,7 @@ window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
 	render: function () {
 		var content = this.template({
 			board: this.model,
+			modalID: this.modalID
 			//lists: this.model.lists()
 		});
 		

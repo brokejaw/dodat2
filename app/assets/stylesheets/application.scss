@@ -278,7 +278,7 @@
 	margin-bottom: 0px;
 	margin-left: 5px;
 	margin-right: 5px;
-	margin-top: 0px;
+	margin-top: 15px;
 	padding-bottom: 3px;
 	padding-left: 3px;
 	padding-right: 3px;
@@ -295,7 +295,7 @@
 	color: rgb(70, 70, 70);
 	display: block;
 	font-family: 'Helvetica Neue', sans-serif;
-	height: 100%;
+	height: 1000px;
 }
 
 .board_name {
@@ -309,6 +309,23 @@
 	height: 30px;
 	margin-left: 17px;
 	margin-top: 10px;
+}
+
+.board_title_button {
+	box-sizing: border-box;
+	color: rgb(70, 70, 70);
+	cursor: -webkit-grab;
+	display: inline;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 14px;
+	height: auto;
+	line-height: 20px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	text-align: left;
+	white-space: nowrap;
+	width: auto;
 }
 
 .board__name__text {
@@ -338,6 +355,11 @@
 	display: block;
 	font-family: 'Helvetica Neue', sans-serif;
 	position: relative;
+	height: auto;
+}
+
+.create_new_board {
+	padding-left: 54px;
 }
 
 .lists.ui-sortable {
@@ -499,6 +521,9 @@
 }
 
 .list--new {
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: auto;
 	background-attachment: scroll;
 	background-clip: border-box;
 	background-color: rgba(0, 0, 0, 0.117647);
@@ -554,5 +579,9 @@
 }
 
 .list__header:hover .fa.fa-trash-o.pull-right {
+	display: block;
+}
+
+.board_name:hover .fa.fa-trash-o.pull-right {
 	display: block;
 }
