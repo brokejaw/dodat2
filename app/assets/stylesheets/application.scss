@@ -223,7 +223,7 @@
 	position: relative;
 }
 
-ul#lists.lists.ui-sortable {
+.lists.ui-sortable {
 	color: rgb(70, 70, 70);
 	display: block;
 	font-family: 'Helvetica Neue', sans-serif;
@@ -231,6 +231,7 @@ ul#lists.lists.ui-sortable {
 	list-style-image: none;
 	list-style-position: outside;
 	list-style-type: none;
+	height: auto;
 	margin-bottom: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
@@ -271,7 +272,7 @@ ul#lists.lists.ui-sortable {
 	width: 220px;
 }
 
-.list-header {
+.list__header {
 	color: rgb(70, 70, 70);
 	cursor: -webkit-grab;
 	display: block;
@@ -283,7 +284,7 @@ ul#lists.lists.ui-sortable {
 	min-height: 19px;
 	padding-bottom: 2px;
 	padding-left: 6px;
-	padding-right: 26px;
+	padding-right: 4px;
 	padding-top: 0px;
 	position: relative;
 	text-align: left;
@@ -302,6 +303,7 @@ ul#lists.lists.ui-sortable {
 	list-style-position: outside;
 	list-style-type: none;
 	text-align: left;
+	padding-bottom: 5px;
 	white-space: nowrap;
 	width: auto;
 }
@@ -322,7 +324,7 @@ ul#lists.lists.ui-sortable {
 	padding-bottom: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
-	padding-top: 0px;
+	padding-top: 6px;
 	text-align: left;
 	white-space: nowrap;
 }
@@ -347,7 +349,7 @@ ul#lists.lists.ui-sortable {
 	list-style-type: none;
 	margin-bottom: 5px;
 	margin-left: 3px;
-	margin-right: 3px;
+	margin-right: 0px;
 	margin-top: 0px;
 	max-width: 300px;
 	min-height: 35px;
@@ -357,7 +359,7 @@ ul#lists.lists.ui-sortable {
 	padding-top: 6px;
 	text-align: left;
 	white-space: nowrap;
-	width: 198px;
+	width: 208px;
 }
 
 .card__body {
@@ -373,4 +375,51 @@ ul#lists.lists.ui-sortable {
 	text-align: left;
 	white-space: nowrap;
 	width: auto;
+}
+
+.list--new {
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: rgba(0, 0, 0, 0.117647);
+	background-image: none;
+	background-origin: padding-box;
+	background-size: auto;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	color: rgba(255, 255, 255, 0.701961);
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 14px;
+	height: 16px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 0px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	vertical-align: top;
+	white-space: nowrap;
+	width: 220px;
+}
+
+.list--new__button {
+	color: rgba(255, 255, 255, 0.701961);
+	cursor: pointer;
+	display: block;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 14px;
+	height: 16px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	white-space: nowrap;
+	width: 220px;
 }
