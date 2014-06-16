@@ -1,15 +1,15 @@
 
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title"><%= list.escape('title') %>
-			
-		<button class="temp btn btn-sm btn-danger pull-right" data-toggle="modal" data-target="#<%=modalID%>">Delete List</button></h3>
-		
-	</div>
-		<div class="panel-body">
-			<ul id='cards'></ul>
+
+		<div class="list__header">
+			<span class="list__header__name">
+				<%= list.escape('title') %></span>
+				<span class="list__header__buttons">
+					<button class="temp btn btn-sm btn-danger pull-right" data-toggle="modal" data-target="#<%=modalID%>">Delete List</button>
+				</span>
 		</div>
-</div>
+			
+			<ul class="cards ui-sortable" id='cards'></ul>
+
 
 <a href="#" class="addCard">Add a card...</a>
 

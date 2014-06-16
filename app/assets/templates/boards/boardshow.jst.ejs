@@ -1,17 +1,20 @@
 <div class="board_show">
-	<div class="board-canvas" style="height: 538px;">
-		<div id="board" class="clearfix">
+	<div class="board_name">
+		<h1 class="board__name__text"><%= board.escape('title') %></h1>
 		
-			<h2><%= board.escape('title') %></h2>
-			<button class="deleteBoard btn btn-sm btn-danger pull-right">Delete Board</button>
-
-			<div align="center">
-				<ul id='lists'>
+	</div>
+	
+	
+		<div class="board__lists-area">
+				<ul class="lists ui-sortable" id='lists'>
 				</ul>
-			</div>
-		
 			<a href="#" class="newList"><font color="#e2e3e4">Add a list...</font></a>
 		
 		</div>
-	</div>
+
+	
+	
+	
+	
 </div>
+<button class="deleteBoard btn btn-sm btn-danger pull-right">Delete Board</button>
