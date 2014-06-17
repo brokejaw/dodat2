@@ -13,4 +13,6 @@ window.Dodat2.Views.BoardsIndex = Backbone.View.extend({
 		this.$el.html(content);
 		return this;
 	},
+	
+	
 });

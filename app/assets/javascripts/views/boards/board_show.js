@@ -9,8 +9,41 @@ window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
 	},
 	
 	events: {
-		'click button.deleteBoard': 'deleteBoard',
-		'click .list--new__button': 'newList'
+		'click .list--new__button': 'newList',
+		'click button.deleteBoard': 'deleteBoard'
+	},
+	
+	newList: function (event) {
+		event.preventDefault();
+		var view = new Dodat2.Views.ListNew({ model: this.model });
+		
+		$(event.currentTarget).replaceWith(view.render().$el);
+	},
+	
+	render: function () {
+		var content = this.template({
+			board: this.model,
+			modalID: this.modalID
+		});
+		
+		this.$el.html(content);
+		
+		this.renderLists();
+		alert("in board_show render");
+		return this;
+	},
+	
+	renderLists: function () {
+		
+		var that = this;
+		this.model.lists().each(function (list) {
+			var view = new Dodat2.Views.ListShow({
+				model: list
+			});
+			
+			that.addSubView('#lists', view.render());
+		
+		});
 	},
 	
 	deleteBoard: function (event) {
@@ -26,40 +59,4 @@ window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
 			});
 		});
 	},
-	
-	newList: function (event) {
-		event.preventDefault();
-		var view = new Dodat2.Views.ListNew({ model: this.model });
-		
-		$(event.currentTarget).replaceWith(view.render().$el);
-	},
-	
-	render: function () {
-		var content = this.template({
-			board: this.model,
-			modalID: this.modalID
-			//lists: this.model.lists()
-		});
-		
-		//put the content of the template into the $el
-		this.$el.html(content);
-		
-		//put the content of the subviews into the same $el
-		this.renderLists();
-
-		//return this instance of the view, eventually the ROUTER
-		//will add this's $el to the actual DOM
-		return this;
-		
-	},
-	
-	renderLists: function () {
-		var that = this;
-		this.model.lists().each(function (list) {
-			var view = new Dodat2.Views.ListShow({
-				model: list
-			});
-			that.addSubView('#lists', view.render());
-		});
-	}
 });

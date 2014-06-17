@@ -1,15 +1,14 @@
 <div class="board_show">
 	<div class="board_name">
 		<h1 class="board__name__text"><%= board.escape('title') %></h1>
-		<span class="board_title_button">
-			<i class="fa fa-trash-o pull-right" data-toggle="modal" 							data-target="#<%=modalID%>"></i>
-		</span>
 	</div>
 	
 	
 		<div class="board__lists-area">
 				<ul class="lists ui-sortable" id='lists'>
-					
+					<span class="board_title_button">
+						<i class="fa fa-trash-o pull-right" data-toggle="modal" 							data-target="#<%=modalID%>"></i>
+					</span>
 				</ul>
 				<div id="list--new" class="list--new">
 					<span class="list--new__button">Add a list...</span>

@@ -38,11 +38,9 @@ window.Dodat2.Router = Backbone.Router.extend({
     if (this._currentView) {
       this._currentView.remove();
     }
-		
+		alert("in swapView");
+		debugger
     this._currentView = view;
     this.$rootEl.html(view.render().$el);
   }
 });
-
-
-//every view has this.$el. default = <div>...</div>window.Dodat2.Router.Router = Backbone.Routers.extend({
