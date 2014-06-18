@@ -1,18 +1,14 @@
 <div class="board_show">
 	<div class="board_name">
+		<i class="fa fa-trash-o pull-right" data-toggle="modal" 						data-target="#<%=modalID%>"></i>
 		<h1 class="board__name__text"><%= board.escape('title') %></h1>
 	</div>
 	
 	
 		<div class="board__lists-area">
-				<ul class="lists ui-sortable" id='lists'>
-					<span class="board_title_button">
-						<i class="fa fa-trash-o pull-right" data-toggle="modal" 							data-target="#<%=modalID%>"></i>
-					</span>
-				</ul>
-				<div id="list--new" class="list--new">
+				<ul class="lists sortable ui-sortable" id='lists'>
 					<span class="list--new__button">Add a list...</span>
-				</div>
+				</ul>
 		</div>
 </div>
 
@@ -29,8 +25,12 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" 						data-dismiss="modal">Cancel</button>
-        <button type="button" class="deleteBoard btn btn-primary">Save 					changes</button>
+        <button type="button" class="deleteBoard btn btn-primary">Delete it all!</button>
       </div>
     </div>
   </div>
 </div>
+
+					<div id="list--new" class="list--new">
+						<span class="list--new__button">Add a list...</span>
+					</div>

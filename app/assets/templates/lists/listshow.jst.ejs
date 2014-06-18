@@ -1,13 +1,12 @@
-
-		<div class="list__header">
-			<span class="list__header__name">
-				<%= list.escape('title') %></span>
-				<span class="list__header__buttons">
-				<i class="fa fa-trash-o pull-right" data-toggle="modal" 						data-target="#<%=modalID%>"></i>
-		</div>
-			<ul class="cards ui-sortable" id='cards'></ul>
-<a href="#" class="addCard">Add a card...</a>
-		</div>
+<div class="list__header">
+	<span class="list__header__name">
+		<%= list.escape('title') %></span>
+		<span class="list__header__buttons">
+		<i class="fa fa-trash-o pull-right" data-toggle="modal" 						data-target="#<%=modalID%>"></i>
+</div>
+<ul class="cards ui-sortable" id='cards'></ul>
+	<a href="#" class="addCard">Add a card...</a>
+</div>
 
 
 <div class="modal fade" id="<%=modalID%>" role="dialog" 			aria-labelledby="myModalLabel" aria-hidden="true">

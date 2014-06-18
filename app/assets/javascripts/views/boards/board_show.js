@@ -10,7 +10,7 @@ window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
 	
 	events: {
 		'click .list--new__button': 'newList',
-		'click button.deleteBoard': 'deleteBoard'
+		'click .deleteBoard': 'deleteBoard'
 	},
 	
 	newList: function (event) {

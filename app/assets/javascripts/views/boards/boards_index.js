@@ -6,7 +6,8 @@ window.Dodat2.Views.BoardsIndex = Backbone.View.extend({
 	},
 	
 	events: {
-		'click .addBoard': 'addBoard'
+		'click .addBoard': 'addBoard',
+		'click .deleteBoard': 'deleteBoard'
 	},
 	
 	render: function () {
@@ -19,7 +20,6 @@ window.Dodat2.Views.BoardsIndex = Backbone.View.extend({
 	},
 	
 	addBoard: function(event) {
-		
 		event.preventDefault();
 		var view = new Dodat2.Views.BoardNew({
 			collection: allBoards
@@ -27,4 +27,3 @@ window.Dodat2.Views.BoardsIndex = Backbone.View.extend({
 		$(event.currentTarget).replaceWith(view.render().$el);
 	}
 });
-
