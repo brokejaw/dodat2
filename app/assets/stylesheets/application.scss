@@ -14,6 +14,10 @@
 
 @import "bootstrap";
 
+.jumbotron {
+	height: 100%;
+}
+
 .header {
 	position: absolute;
 	left: 0;
@@ -572,6 +576,14 @@
 
 .fa.fa-trash-o.pull-right {
 	display: none;
+}
+
+.fa.fa-info {
+	display: none;
+}
+
+.card:hover .fa.fa-info {
+	display: block;
 }
 
 .card:hover .fa.fa-trash-o.pull-right {

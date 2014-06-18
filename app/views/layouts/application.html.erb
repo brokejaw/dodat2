@@ -9,10 +9,12 @@
 	</head>
 	<body> 
 		<div class="header" id="header">
+			<% if logged_in? %>
 			<div class="header__boards-menu">
 				<i class="upside-down fa fa-bar-chart-o"></i>
 					<a class="header_board_text" href="#">Boards</a>
 			</div>
+			<% end %>
 			
 			<div class="header__brand">
 				<h4 class="header__brand__text">
@@ -20,6 +22,7 @@
 				</h4>
 			</div>
 			
+			<% if logged_in? %>
 			<div class="header__section__right">
 				<div class="header_add_board">
 					<i class="fa fa-plus"></i>
@@ -31,6 +34,7 @@
 					<img class="account_avatar" src="http://www.gravatar.com/avatar/fbbd6b5524c2e0ee1bb0719a626d8330?s=64">
 				</div>
 				</div>
+				<% end %>
 		</div>
 
 	<%= yield %>

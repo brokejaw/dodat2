@@ -3,6 +3,7 @@ window.Dodat2.Views.CardShow = Backbone.View.extend({
 	
 	initialize: function(){
 		this.modalID = "card-modal-" + this.model.id;
+		this.detailID = "card-detail-modal-" + this.model.id;
 	},
 	
 	className: 'card',
@@ -14,12 +15,12 @@ window.Dodat2.Views.CardShow = Backbone.View.extend({
 	},
 	
 	render: function () {
-		
 		var content = this.template({
 			card: this.model,
-			modalID: this.modalID
+			modalID: this.modalID,
+			detailID: this.detailID
 		});
-
+		
 		this.$el.html(content);
 		return this;
 	},
@@ -32,13 +33,5 @@ window.Dodat2.Views.CardShow = Backbone.View.extend({
 		$modal.on('hidden.bs.modal', function() {
 			that.model.destroy();
 		});
-	},
-	
-	addCard: function(event) {
-		event.preventDefault();
-		var view = new Dodat2.Views.CardNew({
-			model: this.model
-		});
-		$(event.currentTarget).replaceWith(view.render().$el);
 	}
 });

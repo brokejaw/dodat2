@@ -17,10 +17,8 @@ window.Dodat2.Views.CardNew = Backbone.View.extend({
 	create: function (event) {
 		event.preventDefault();
 		var params = $(event.currentTarget).serializeJSON()["card"];
-		
 		this.model.cards().create(params, {
 			wait: true, 
-			success: function (savedList) {}
 		})
 	},
 });

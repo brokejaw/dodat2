@@ -29,7 +29,6 @@ window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
 		this.$el.html(content);
 		
 		this.renderLists();
-		alert("in board_show render");
 		return this;
 	},
 	

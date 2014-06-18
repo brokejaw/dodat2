@@ -1,10 +1,10 @@
-<div class="signinout">
-	<div class="container" align="center">
-	  <%= render "layouts/errors" %>
-		<div class="fontsize">
-			<h1><font color="#e2e3e4">Dodat</font></h1>
-		</div>
-	  <h1><font color="#e2e3e4">Sign Up</font></h1>
+
+<div class="container" align="center">
+	<div class="signinout">
+  <%= render "layouts/errors" %>
+	
+	<h1>Dodat</h1>
+  <h1>Sign Up</h1>
 
 	  <form action="<%= users_url %>" method="POST">
 	    <%= auth_token_input %>
@@ -12,14 +12,14 @@
 	      <font color="#428bca">Username</font><br>
 	      <input id="username" type="text" name="user[username]">
 	    </label>
-	    <br>
+	    <br> 
 	    <label>
 	      <font color="#428bca">Password</font><br>
 	      <input id="password" type="password" name="user[password]">
 	    </label>
 	    <br>
 	    <input type="submit" class="btn btn-primary" value="Sign Up">
-	    <a href="<%= new_session_url %>"><font color="#e2e3e4">Back to Login</font></a>
+	    <a href="<%= new_session_url %>">Back to Login</a>
 	  </form>
 	</div>
 </div>

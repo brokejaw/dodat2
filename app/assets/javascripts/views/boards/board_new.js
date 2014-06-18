@@ -21,8 +21,7 @@ window.Dodat2.Views.BoardNew = Backbone.View.extend({
 		this.collection.create(newBoard, {
 			wait: true, 
 			success: function (savedBoard) {
-				var newBoardUrl = '#boards/' + savedBoard.id;
-				Dodat2.Router.navigate(newBoardUrl, {trigger: true} )
+				Dodat2.Router.navigate('#', {trigger: true} )
 			}
 		})
 	}

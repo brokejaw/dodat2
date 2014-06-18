@@ -24,7 +24,7 @@ window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 		
 		this.$el.html(content);
 		this.renderCards();
-			
+		
 		return this;
 	},
 	
