@@ -1,11 +1,9 @@
 <div class="board_show">
 	<div class="board_name">
-		<i class="fa fa-trash-o pull-right" data-toggle="modal" 						data-target="#<%=modalID%>"></i>
+		<i class="fa fa-trash-o pull-right trash-board-name" data-toggle="modal" 						data-target="#<%=modalID%>"></i>
 		<h1 class="board__name__text"><%= board.escape('title') %></h1>
 	</div>
-	
-	
-		<div class="board__lists-area">
+			<div class="board__lists-area">
 				<ul class="lists sortable ui-sortable" id='lists'>
 					<span class="list--new__button">Add a list...</span>
 				</ul>
@@ -31,6 +29,6 @@
   </div>
 </div>
 
-					<div id="list--new" class="list--new">
-						<span class="list--new__button">Add a list...</span>
-					</div>
+<div id="list--new" class="list--new">
+	<span class="list--new__button">Add a list...</span>
+</div>

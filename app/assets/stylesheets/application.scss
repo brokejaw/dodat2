@@ -218,6 +218,11 @@
 	text-decoration: none solid rgb(246, 246, 246);
 	top: 0px;
 	white-space: nowrap;
+	width: 290px;
+}
+
+.board_index_title_link:hover {
+	text-decoration: none;
 }
 
 .board_index_show {
@@ -294,6 +299,21 @@
 	width: 290px;
 }
 
+.board_name {
+	border-radius: 3px;
+
+	color: rgb(70, 70, 70);
+	display: inline-block;
+	font-family: 'Helvetica Neue', sans-serif;
+	height: 30px;
+	margin-left: 17px;
+	margin-top: 10px;
+}
+
+.board_name:hover .fa.fa-trash-o.pull-right {
+	display: block;
+}
+
 .board_show {
 	background-color: rgb(35, 113, 159);
 	color: rgb(70, 70, 70);
@@ -302,18 +322,7 @@
 	height: 1000px;
 }
 
-.board_name {
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	color: rgb(70, 70, 70);
-	display: inline-block;
-	font-family: 'Helvetica Neue', sans-serif;
-	height: 30px;
-	margin-left: 17px;
-	margin-top: 10px;
-}
+
 
 .board_title_button {
 	box-sizing: border-box;
@@ -574,12 +583,19 @@
 	width: 220px;
 }
 
+.center-page {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+
 .fa.fa-trash-o.pull-right {
 	display: none;
 }
 
 .fa.fa-info {
 	display: none;
+	padding-right: 8px;
 }
 
 .card:hover .fa.fa-info {
@@ -594,6 +610,11 @@
 	display: block;
 }
 
-.board_name:hover .fa.fa-trash-o.pull-right {
-	display: block;
+.modal-header {
+	padding: 8px;
+	
+}
+
+.modal-body-card {
+	padding: 0px;
 }
