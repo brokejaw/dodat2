@@ -1,1 +1,1 @@
-json.(card, :title, :description, :list_id, :id)
+json.(card, :title, :description, :list_id, :id, :rank)

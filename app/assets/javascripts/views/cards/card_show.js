@@ -20,7 +20,7 @@ window.Dodat2.Views.CardShow = Backbone.View.extend({
 			modalID: this.modalID,
 			detailID: this.detailID
 		});
-		
+	
 		this.$el.html(content);
 		return this;
 	},
