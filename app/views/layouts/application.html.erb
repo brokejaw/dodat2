@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title>Dodat2</title>
+	  <title>Dodat</title>
 	  <%= stylesheet_link_tag    "application", media: "all" %>
 	  <%= javascript_include_tag "application"%>
 	  <%= csrf_meta_tags %>
@@ -9,12 +9,12 @@
 	</head>
 	<body> 
 		<div class="header" id="header">
+			
 			<% if logged_in? %>
 			<div class="header__boards-menu">
 				<i class="upside-down fa fa-bar-chart-o"></i>
 					<a class="header_board_text" href="#">Boards</a>
 			</div>
-				
 			<% end %>
 			
 			<div class="header__brand">
@@ -25,18 +25,26 @@
 			
 			<% if logged_in? %>
 			<div class="header__section__right">
+				
 				<div class="header_add_board">
 					<i class="fa fa-cog"></i>
 				</div>
+				
 				<div class="header_section_right_account_menu">
 					<span class="header_guest_name">
 						Socrates
 					</span>
 					<img class="account_avatar" src="http://www.gravatar.com/avatar/fbbd6b5524c2e0ee1bb0719a626d8330?s=64">
 				</div>
+				
 			</div>
-				<% end %>
+			<% end %>
+				
 		</div>
+		
 	<%= yield %>
+	<!-- <% if logged_in? %>
+	<%= button_to "Log out", session_url, { method: :delete, class: "btn btn-xs btn-warning" } %>
+	<% end %> -->
 	</body>
 </html>

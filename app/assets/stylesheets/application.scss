@@ -572,7 +572,7 @@
 .list--new__button {
 	color: rgba(255, 255, 255, 0.701961);
 	cursor: pointer;
-	display: block;
+	display: inline-block;
 	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 14px;
 	height: 16px;
@@ -581,6 +581,8 @@
 	list-style-type: none;
 	white-space: nowrap;
 	width: 220px;
+	padding-top: 10px;
+	padding-left: 20px;
 }
 
 .center-page {
