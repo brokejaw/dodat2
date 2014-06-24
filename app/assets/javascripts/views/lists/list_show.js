@@ -26,9 +26,6 @@ window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 		
 		this.$el.html(content);
 		this.renderCards();
-		
-		$(".cards").sortable("refresh");
-		$(".lists").sortable("refresh");
 		return this;
 	},
 	
