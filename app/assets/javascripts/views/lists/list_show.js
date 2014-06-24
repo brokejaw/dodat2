@@ -8,6 +8,8 @@ window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 	initialize: function () {
 		this.listenTo(this.model.cards(), "remove sync", this.render),
 		this.modalID = "list-modal-" + this.model.id;
+		$(".cards").sortable();
+		$(".lists").sortable();
 	},
 	
 	events: {
@@ -16,8 +18,6 @@ window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 	},
 	
 	render: function () {
-		$(".cards").sortable();
-		$(".lists").sortable();
 		var content = this.template({
 			list: this.model,
 			cards: this.model.cards(),
@@ -27,6 +27,8 @@ window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 		this.$el.html(content);
 		this.renderCards();
 		
+		$(".cards").sortable("refresh");
+		$(".lists").sortable("refresh");
 		return this;
 	},
 	
