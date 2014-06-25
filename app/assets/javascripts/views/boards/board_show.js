@@ -20,6 +20,15 @@ window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
 		$(event.currentTarget).replaceWith(view.render().$el);
 	},
 	
+	sortableLists: function () {
+		var view = this;
+		
+		this.$el.find('#lists').sortable({
+			tolerance: 'pointer',
+			opacity: 0.7,
+		});
+	},
+	
 	render: function () {
 		var content = this.template({
 			board: this.model,
@@ -29,6 +38,8 @@ window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
 		this.$el.html(content);
 		
 		this.renderLists();
+		
+		this.sortableLists();
 		return this;
 	},
 	
