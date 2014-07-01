@@ -29,6 +29,13 @@ window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
 		});
 	},
 	
+	droppableLists: function () {
+		var view = this;
+		
+		this.$el.find('#lists').droppable({
+		});
+	},
+	
 	render: function () {
 		var content = this.template({
 			board: this.model,
@@ -40,6 +47,7 @@ window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
 		this.renderLists();
 		
 		this.sortableLists();
+		this.droppableLists();
 		return this;
 	},
 	
@@ -58,9 +66,11 @@ window.Dodat2.Views.BoardShow = Backbone.CompositeView.extend({
 	
 	deleteBoard: function (event) {
 		var that = this;
-		event.preventDefault();
 		var $modal = $('#' + this.modalID);
+		
+		event.preventDefault();
 		$modal.modal('hide');
+		
 		$modal.on('hidden.bs.modal', function(){
 			that.model.destroy({
 				success: function () {
