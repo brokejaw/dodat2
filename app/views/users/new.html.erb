@@ -1,8 +1,7 @@
-
-<div class="container" align="center">
+<!-- <div class="container" align="center">
 	<div class="signinout">
   <%= render "layouts/errors" %>
-	
+
 	<h1>Dodat</h1>
   <h1>Sign Up</h1>
 
@@ -12,14 +11,44 @@
 	      <font color="#428bca">Username</font><br>
 	      <input id="username" type="text" name="user[username]">
 	    </label>
-	    <br> 
+	    <br>
 	    <label>
 	      <font color="#428bca">Password</font><br>
 	      <input id="password" type="password" name="user[password]">
 	    </label>
 	    <br>
-	    <input type="submit" class="btn btn-primary" value="Sign Up">
+	    <input type="submit" class="btn" value="Sign Up">
 	    <a href="<%= new_session_url %>">Back to Login</a>
 	  </form>
+	</div>
+</div> -->
+
+<div class="container" align="center">
+	<div class="signin-outer">
+  	<%= render "layouts/errors" %>
+			
+		<h1 class="logo-text">Sign Up</h1>
+		
+	  <form action="<%= session_url %>" method="post">
+	    <%= auth_token_input %>
+	    <span class="form-labels">Username:</span>
+				<br>
+	      <input type="text" name="user[username]">
+				<br>
+	      <span class="form-labels">Password:</span>
+				<br>
+	      <input type="password" name="user[password]">
+	    	<br><br>
+	    <input type="submit" class="btn" value="Sign Up">
+	    <a href="<%= new_session_url %>">Sign In</a>
+	  </form>
+	<br>
+		<form action="<%= session_url%>" method="post">
+			<%=auth_token_input %>
+			<input type="hidden" name="user[username]" value="steve">
+			<input type="hidden" name="user[password]" value="password">
+			<input type="submit" class="btn btn-primary custom-button"value="Guest Login!">
+		</form>
+				
 	</div>
 </div>

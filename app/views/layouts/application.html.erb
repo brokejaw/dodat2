@@ -17,22 +17,28 @@
 			</div>
 			<% end %>
 			
+			<% if logged_in? %>
 			<div class="header__brand">
 				<h4 class="header__brand__text">
-					<a href="#">Dodat</a>
+					<a href="#">DODAT</a>
 				</h4>
 			</div>
+			<% end %>
+			
+			<% if !logged_in? %>
+			<div class="header__brand">
+				<h4 class="header__brand__text">
+					<div class="header-intro-text">Welcome to DODAT!</div>
+				</h4>
+			</div>
+			<% end %>
 			
 			<% if logged_in? %>
 			<div class="header__section__right">
 				
-				<!-- <div class="header_add_board">
-					<i class="fa fa-cog"></i>
-				</div> -->
-				
 				<div class="header_section_right_account_menu">
 					<span class="header_guest_name">
-						Socrates
+						Guest
 					</span>
 					<img class="account_avatar" src="http://www.gravatar.com/avatar/fbbd6b5524c2e0ee1bb0719a626d8330?s=64">
 				</div>
