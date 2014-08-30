@@ -16,6 +16,7 @@ window.Dodat2.Router = Backbone.Router.extend({
 	},
 	
 	boardShow: function (id) {
+		// pull the board from the collection, or request from server
 		var board = allBoards.getOrFetch(id);
 		
 		var view = new Dodat2.Views.BoardShow({

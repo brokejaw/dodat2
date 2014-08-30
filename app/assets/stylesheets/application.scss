@@ -8,6 +8,7 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require jquery-ui
  *= require_self
  *= require_tree .
  */
@@ -342,6 +343,8 @@
 }
 
 .board__name__text {
+	//position: absolute;
+//	width: 200px;
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 	border-top-left-radius: 3px;
@@ -353,10 +356,7 @@
 	font-weight: bold;
 	height: 30px;
 	line-height: 30px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 0px;
+	margin: none;
 	padding-bottom: 0px;
 	padding-left: 10px;
 	padding-right: 10px;

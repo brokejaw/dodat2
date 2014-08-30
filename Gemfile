@@ -25,8 +25,6 @@ gem 'backbone-on-rails'
 gem 'rake', '10.1.1'
 gem 'bcrypt'
 
-
-# this differ from the demo
 gem 'ejs'
 gem 'serialize_json-rails', '~> 0.0.1'
 gem 'rails_12factor'

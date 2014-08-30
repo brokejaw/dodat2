@@ -13,6 +13,7 @@ window.Dodat2 = {
 
 Backbone.CompositeView = Backbone.View.extend({
 	addSubView: function (selector, subview) {
+		// selector = "#lists", subview = view.render();
 		var selectorSubViews;
 		
 		if (this.subviews()[selector]){

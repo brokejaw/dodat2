@@ -38,7 +38,6 @@ window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 	
 	renderCards: function () {
 		var that = this;
-	
 		this.model.cards().each(function (card) {
 			var view = new Dodat2.Views.CardShow({
 				model: card

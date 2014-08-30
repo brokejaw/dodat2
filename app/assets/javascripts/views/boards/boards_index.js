@@ -10,7 +10,7 @@ window.Dodat2.Views.BoardsIndex = Backbone.View.extend({
 		'click .deleteBoard': 'deleteBoard'
 	},
 	
-	render: function () {
+	render: function() {
 		var content = this.template({ 
 			boards: this.collection 
 		});

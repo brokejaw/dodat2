@@ -1,5 +1,5 @@
 window.Dodat2.Collections.Boards = Backbone.Collection.extend({
-	url: "api/boards", //
+	url: "api/boards",
 	model: Dodat2.Models.Board,
 	
 	getOrFetch: function (id) {

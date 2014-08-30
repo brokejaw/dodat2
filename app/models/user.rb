@@ -33,6 +33,7 @@ class User < ActiveRecord::Base
     self.session_token
   end
 
+  # blacklist password_digest
   def as_json(options = {})
     super(options.merge({ except: :password_digest, include: :cards }))
   end

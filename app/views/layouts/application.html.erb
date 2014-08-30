@@ -13,7 +13,7 @@
 			<% if logged_in? %>
 			<div class="header__boards-menu">
 				<i class="upside-down fa fa-bar-chart-o"></i>
-					<a class="header_board_text" href="#">Boards</a>
+					<a href="#" class="header_board_text">Boards</a>
 			</div>
 			<% end %>
 			
@@ -43,8 +43,8 @@
 		</div>
 		
 	<%= yield %>
-	<!-- <% if logged_in? %>
+	<% if logged_in? %>
 	<%= button_to "Log out", session_url, { method: :delete, class: "btn btn-xs btn-warning" } %>
-	<% end %> -->
+	<% end %>
 	</body>
 </html>
