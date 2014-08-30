@@ -17,8 +17,8 @@ window.Dodat2.Views.ListShow = Backbone.CompositeView.extend({
 		var view = this;
 		
 		this.$el.find('#cards').sortable({
-			tolerance: 'pointer',
-			opacity: 0.7,
+			tolerance: 'intersect',
+			opacity: 0.5,
 		});
 	},
 	
