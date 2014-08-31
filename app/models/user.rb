@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   end
 
   def is_password?(unencrypted_password)
-    BCrypt::Password.new(self.password_digest).is_password?(unencrypted_password)
+   BCrypt::Password.new(self.password_digest).is_password?(unencrypted_password)
   end
 
   def reset_session_token!

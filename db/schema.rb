@@ -47,5 +47,4 @@ ActiveRecord::Schema.define(version: 20140619043004) do
     t.datetime "updated_at"
     t.boolean  "guest"
   end
-
 end
