@@ -25,7 +25,7 @@ class Api::BoardsController < ApplicationController
   end
   
   def index
-    @boards = Board.all # sql queries, via rails
+    @boards = Board.where(["user_id = ?", current_user.id])
     render :index
   end
   
