@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 #Board 1
-
+User.create!(:username: "steve", :password_digest: "password")
 
 Board.create!(:title => "Welcome", :user_id => 1)
 #List 1
