@@ -36,9 +36,15 @@
 			<% if logged_in? %>
 			<div class="header__section__right">
 				<div class="header_section_right_account_menu">
+					<% if username == "Steve" %>
+						<span class="header_guest_name">
+							Guest
+						</span>
+					<% else %>
 					<span class="header_guest_name">
-						Guest
+						<%= username %>
 					</span>
+					<% end %>
 					<img class="account_avatar" src="http://www.gravatar.com/avatar/fbbd6b5524c2e0ee1bb0719a626d8330?s=64">
 				</div>
 				
