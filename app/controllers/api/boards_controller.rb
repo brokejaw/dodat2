@@ -39,3 +39,5 @@ class Api::BoardsController < ApplicationController
     params.require(:board).permit(:title, :user_id)
   end
 end
+
+# inconsequential change
