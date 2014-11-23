@@ -4,6 +4,7 @@ class Api::ListsController < ApplicationController
   #   render :json => @lists
   # end
   # 
+  before_action :require_login!
   def show
     @list = List.find(params[:id])
     render :json => @list

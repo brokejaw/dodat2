@@ -1,4 +1,5 @@
 class Api::BoardsController < ApplicationController
+  before_action :require_login!
   def update
     @board = Board.find(params[:id])
     if @board.update_attributes(params[:board])
@@ -15,7 +16,7 @@ class Api::BoardsController < ApplicationController
   end
   
   def create
-    @board = Board.new(board_params)
+    @board = current_user.boards.new(board_params)
     
     if @board.save
       render :json => @board
@@ -35,9 +36,9 @@ class Api::BoardsController < ApplicationController
   end
   
   private
+  
   def board_params
-    params.require(:board).permit(:title, :user_id)
+    params.require(:board).permit(:title)
   end
 end
 
-# inconsequential change
