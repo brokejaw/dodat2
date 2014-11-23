@@ -4,7 +4,6 @@ class Api::CardsController < ApplicationController
     @card = Card.new(card_params)
     
     if @card.save
-      @card.update(rank: @card.id)
       render :json => @card
     else
       render :json => @card.errors, :status => :unprocessable_entity
