@@ -1,7 +1,10 @@
 "rails generate backbone:scaffold ModelName --javascript" will create a lot of boilerplate code for us. it creates a new router each time, so be careful. 
 
 to re-seed:
-drop the local db first, then re-seed
+rake db:drop
+rake db:create
+rake db:migrate
+rake db:seed
 
 heroku pg:reset Jade
 heroku pg:push dodat2_development Jade
