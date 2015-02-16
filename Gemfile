@@ -30,4 +30,4 @@ gem 'ejs'
 gem 'serialize_json-rails', '~> 0.0.1'
 gem 'rails_12factor'
 gem 'debugger', group: [:development, :test]
-
+gem 'devise'
